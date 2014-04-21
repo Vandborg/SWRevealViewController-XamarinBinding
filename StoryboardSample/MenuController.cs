@@ -35,7 +35,7 @@ namespace SWRevealExample {
           destinationController.ViewColor = UIColor.Blue;
         }
       }
-      this.RevealViewController().SetFrontViewController(segueReveal.DestinationViewController, true);
+	  this.RevealViewController().PushFrontViewController(segueReveal.DestinationViewController, true);
     }
   }
 }

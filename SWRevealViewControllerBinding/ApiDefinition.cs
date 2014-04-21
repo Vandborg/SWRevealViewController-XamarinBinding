@@ -6,7 +6,7 @@ using MonoTouch.UIKit;
 
 namespace SWRevealViewControllerBinding
 {
-	[BaseType (typeof(UIViewController))]
+	[BaseType (typeof (UIViewController))]
 	public partial interface SWRevealViewController
 	{
 		[Export ("initWithRearViewController:frontViewController:")]
@@ -15,14 +15,23 @@ namespace SWRevealViewControllerBinding
 		[Export ("rearViewController", ArgumentSemantic.Retain)]
 		UIViewController RearViewController { get; set; }
 
+		[Export ("setRearViewController:animated:")]
+		void SetRearViewController (UIViewController rearViewController, bool animated);
+
 		[Export ("rightViewController", ArgumentSemantic.Retain)]
 		UIViewController RightViewController { get; set; }
+
+		[Export ("setRightViewController:animated:")]
+		void SetRightViewController (UIViewController rightViewController, bool animated);
 
 		[Export ("frontViewController", ArgumentSemantic.Retain)]
 		UIViewController FrontViewController { get; set; }
 
 		[Export ("setFrontViewController:animated:")]
 		void SetFrontViewController (UIViewController frontViewController, bool animated);
+
+		[Export ("pushFrontViewController:animated:")]
+		void PushFrontViewController (UIViewController frontViewController, bool animated);
 
 		[Export ("frontViewPosition")]
 		FrontViewPosition FrontViewPosition { get; set; }
@@ -90,6 +99,9 @@ namespace SWRevealViewControllerBinding
 		[Export ("toggleAnimationDuration")]
 		double ToggleAnimationDuration { get; set; }
 
+		[Export ("replaceViewAnimationDuration")]
+		double ReplaceViewAnimationDuration { get; set; }
+
 		[Export ("frontViewShadowRadius")]
 		float FrontViewShadowRadius { get; set; }
 
@@ -103,7 +115,7 @@ namespace SWRevealViewControllerBinding
 		SWRevealViewControllerDelegate Delegate { get; set; }
 	}
 
-	[Model, BaseType (typeof(NSObject))]
+	[Model, BaseType (typeof (NSObject))]
 	public partial interface SWRevealViewControllerDelegate
 	{
 		[Export ("revealController:willMoveToPosition:")]
@@ -119,7 +131,7 @@ namespace SWRevealViewControllerBinding
 		bool PanGestureShouldBegin (SWRevealViewController revealController);
 
 		[Export ("revealControllerTapGestureShouldBegin:")]
-		bool TapGeusterShouldBegin (SWRevealViewController revealController);
+		bool TapGestureShouldBegin (SWRevealViewController revealController);
 
 		[Export ("revealControllerPanGestureBegan:")]
 		void PanGestureBegan (SWRevealViewController revealController);
@@ -135,9 +147,18 @@ namespace SWRevealViewControllerBinding
 
 		[Export ("revealController:panGestureEndedToLocation:progress:")]
 		void PanGestureEndedToLocation (SWRevealViewController revealController, float location, float progress);
+
+		[Export ("revealController:willAddViewController:forOperation:animated:")]
+		void WillAddViewController (SWRevealViewController revealController, UIViewController viewController, SWRevealControllerOperation operation, bool animated);
+
+		[Export ("revealController:didAddViewController:forOperation:animated:")]
+		void DidAddViewController (SWRevealViewController revealController, UIViewController viewController, SWRevealControllerOperation operation, bool animated);
+
+		[Export ("revealController:animationControllerForOperation:fromViewController:toViewController:")]
+		UIViewControllerAnimatedTransitioning AnimationControllerForOperation (SWRevealViewController revealController, SWRevealControllerOperation operation, UIViewController fromVC, UIViewController toVC);
 	}
 
-	[Category, BaseType (typeof(UIViewController))]
+	[Category, BaseType (typeof (UIViewController))]
 	public partial interface SWRevealViewController_UIViewController
 	{
 		[Export ("revealViewController")]
@@ -146,7 +167,7 @@ namespace SWRevealViewControllerBinding
 
 	public delegate void SegueCallback(SWRevealViewControllerSegue segue, UIViewController svc, UIViewController dvc);
 
-	[BaseType (typeof(UIStoryboardSegue))]
+	[BaseType (typeof (UIStoryboardSegue))]
 	public partial interface SWRevealViewControllerSegue
 	{
 		[Export ("performBlock", ArgumentSemantic.Retain)]

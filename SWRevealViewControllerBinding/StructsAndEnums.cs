@@ -11,4 +11,10 @@ namespace SWRevealViewControllerBinding
 		RightMost,
 		RightMostRemoved
 	}
+
+	public enum SWRevealControllerOperation {
+		ReplaceRearController,
+		ReplaceFrontController,
+		ReplaceRightController
+	}
 }
