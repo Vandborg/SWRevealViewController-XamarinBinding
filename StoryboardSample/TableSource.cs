@@ -1,11 +1,12 @@
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
+using System;
 
 namespace SWRevealExample {
   public class TableSource : UITableViewSource {
     public TableSource() {}
 
-    public override int RowsInSection(UITableView tableview, int section) {
+    public override nint RowsInSection(UITableView tableview, nint section) {
       return 3;
     }
 
