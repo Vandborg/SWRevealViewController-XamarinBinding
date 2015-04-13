@@ -51,6 +51,6 @@ Global
 		{DB814645-929B-4CB4-A926-B2CAE4A543AD}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = StoryboardSample\StoryboardSample.csproj
+		version = 0.2
 	EndGlobalSection
 EndGlobal
