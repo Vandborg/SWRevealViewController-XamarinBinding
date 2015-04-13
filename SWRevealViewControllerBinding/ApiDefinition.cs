@@ -165,10 +165,10 @@ namespace SWRevealViewControllerBinding
 		SWRevealViewController RevealViewController ();
 	}
 
-	public delegate void SegueCallback(SWRevealViewControllerSegue segue, UIViewController svc, UIViewController dvc);
+	public delegate void SegueCallback(SWRevealViewControllerSegueSetController segue, UIViewController svc, UIViewController dvc);
 
 	[BaseType (typeof (UIStoryboardSegue))]
-	public partial interface SWRevealViewControllerSegue
+	public partial interface SWRevealViewControllerSegueSetController
 	{
 		[Export ("performBlock", ArgumentSemantic.Retain)]
 		SegueCallback PerformDelegate { get; set; }

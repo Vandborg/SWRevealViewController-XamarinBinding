@@ -20,7 +20,7 @@ namespace SWRevealExample {
 
     public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender) {
       base.PrepareForSegue(segue, sender);
-      var segueReveal = segue as SWRevealViewControllerSegue;
+	  var segueReveal = segue as SWRevealViewControllerSegueSetController;
       if (segueReveal == null) {
         return;
       }
