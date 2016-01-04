@@ -4,7 +4,7 @@
 // actions made in the UI designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
-using MonoTouch.Foundation;
+using Foundation;
 using System.CodeDom.Compiler;
 
 namespace SWRevealExample
@@ -13,10 +13,10 @@ namespace SWRevealExample
 	partial class ColorViewController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UILabel DummyLabel { get; set; }
+		UIKit.UILabel DummyLabel { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIBarButtonItem RevealButtonItem { get; set; }
+		UIKit.UIBarButtonItem RevealButtonItem { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{

@@ -9,8 +9,8 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="g1c-XS-K4n" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="omC-Z4-hbt"/>
-                        <segue destination="vXM-Tn-RuW" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegue" id="tCo-CT-wxC"/>
+                        <segue destination="g1c-XS-K4n" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="omC-Z4-hbt"/>
+                        <segue destination="vXM-Tn-RuW" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="tCo-CT-wxC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vXM-Tn-RuW" kind="custom" customClass="SWRevealViewControllerSegue" id="Ost-kz-d13"/>
+                                    <segue destination="vXM-Tn-RuW" kind="custom" customClass="SWRevealViewControllerSegueSetController" id="Ost-kz-d13"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="two" id="tcK-Lb-gve">
@@ -62,7 +62,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="1X6-8y-LzI" kind="custom" customClass="SWRevealViewControllerSegue" id="a5y-j6-lbI"/>
+                                    <segue destination="1X6-8y-LzI" kind="custom" customClass="SWRevealViewControllerSegueSetController" id="a5y-j6-lbI"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="three" id="rDf-Ag-jHX">
@@ -81,7 +81,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="1X6-8y-LzI" kind="custom" customClass="SWRevealViewControllerSegue" id="EX3-8b-opd"/>
+                                    <segue destination="1X6-8y-LzI" kind="custom" customClass="SWRevealViewControllerSegueSetController" id="EX3-8b-opd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

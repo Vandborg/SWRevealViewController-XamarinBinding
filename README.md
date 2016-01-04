@@ -5,6 +5,11 @@ I have not made the project this is merely the a XamarinBinding for it. You can 
 
 There is a storyboard Example made by [Viv-Rajkumar](https://github.com/Viv-Rajkumar/)
 
+## Version 0.2 Update
+
+The binding has been updated to use version 2.3.0 of SWRevealViewController and to be compatible with x64 processors. There is one breaking change from 0.1: SWRevealViewController removed the “SWRevealViewControllerSegue” and replaced it with “SWRevealViewControllerSegueSetController”. If you update from 0.1 to 0.2 of this library, you need to adjust your Segues to match this change.
+
+
 ## License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
