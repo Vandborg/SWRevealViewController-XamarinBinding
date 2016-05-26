@@ -1,3 +1,5 @@
+## Since I do not have a Xamarin License anymore the project have been discontinued. Feel free to takeover the project if you want. :)
+
 SWRevealViewController-XamarinBinding
 =====================================
 A UIViewController subclass for revealing a rear (left and/or right) view controller behind a front controller, inspired by the Facebook app, done right!  
